@@ -9,7 +9,8 @@ const proxy1 = new Proxy(user, {
     if (!target[property]) {
       throw new Error("Property dose not exist");
     }
-    return target[property];
+    return Reflect.get(target, property);
+    // return target[property];
   },
   set(target, property, value) {
     if (!target[property]) {
@@ -28,7 +29,8 @@ const proxy1 = new Proxy(user, {
           throw new Error(`${property} must be a number and grater then 0`);
         break;
     }
-    target[property] = value;
+    Reflect.set(target, property, value);
+    // target[property] = value;
   },
 });
 
@@ -38,13 +40,13 @@ console.log(proxy1.age);
 
 proxy1.firstName = "Vishal";
 proxy1.lastName = "Patel";
-proxy1.age = -25;
+proxy1.age = 25;
 
 console.log(proxy1.firstName);
 console.log(proxy1.lastName);
 console.log(proxy1.age);
 
-proxy1.firstName = 8;
+proxy1.firstName = "hello";
 
 console.log(proxy1.firstName);
 console.log(proxy1.lastName);
