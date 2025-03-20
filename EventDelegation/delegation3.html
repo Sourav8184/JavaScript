@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #f4f4f4;
+    }
+
+    #category {
+      border: 1px solid black;
+      display: flex;
+      gap: 15px;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .btn {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      background: #007bff;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #0056b3;
+    }
+  </style>
+  <body>
+    <div id="category">
+      <input type="text" id="laptop" class="btn" data-uppercase />
+      <input type="text" id="mouse" class="btn" />
+      <input type="text" id="keyboard" class="btn" data-uppercase />
+      <input type="text" id="monitor" class="btn" />
+      <input type="text" id="Cpu" class="btn" data-uppercase />
+    </div>
+  </body>
+  <script src="delegation3.js"></script>
+</html>
